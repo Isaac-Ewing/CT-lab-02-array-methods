@@ -11,6 +11,8 @@ const reduceArr = (arr, callback, initialValue) => {
     j++;
   }
   while(j < arr.length) {
+    while(!arr[j])
+      j++;
     accumulator = callback(accumulator, arr[j]);
     j++;
   }
